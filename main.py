@@ -8,8 +8,8 @@ from pyzbar.pyzbar import decode
 from PIL import Image
 
 # CHANGE THIS
-path="<image_path>" #put your image file path here
-ag="<angka_giliran>" #put the student's examniation number
+path="SPM scan.png" #put your image file path here
+ag="WB004A101" #put the student's examniation number
 
 img = Image.open(path)
 qr = decode(img)
@@ -34,7 +34,7 @@ driver.maximize_window() # For maximizing window
 driver.implicitly_wait(20) # gives an implicit wait for 20 seconds
 
 wait = WebDriverWait(driver, 10)
-inp=driver.find_element("name", "ag") #input examination number
+inp=driver.find_element("id", "ag") #input examination number
 
 inp.click()
 inp.send_keys(ag)
