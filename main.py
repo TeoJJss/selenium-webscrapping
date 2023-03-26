@@ -8,8 +8,8 @@ from pyzbar.pyzbar import decode
 from PIL import Image
 
 # CHANGE THIS
-path="SPM scan.png" #put your image file path here
-ag="WB004A101" #put the student's examniation number
+path="<image>" #put your image file path here
+ag="<Angka Giliran>" #put the student's examniation number
 
 img = Image.open(path)
 qr = decode(img)
